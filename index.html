@@ -11,15 +11,16 @@
   <header style="background-color: lightblue;">
     <div class="header-content">
       <div class="profile">
-        <img src="images/profile_picture.png" alt="Your Name">
-        <p>欢迎来到我的个人网站！</p>
+        <img src="images/profile_picture.png" alt="Leon Wang">
+        <p>Welcome to my personal website！</p>
       </div>
     </div>
   </header>
 
   <main>
+
     <section id="about">
-      <h2>关于我</h2>
+      <h2>———— About Me ————</h2>
       <div class="about-content">
         <img src="images/about_picture.png" alt="关于我图片" class="about-image">
         <p>在这里添加你的自我介绍，你可以描述自己的背景、技能和兴趣爱好等。图片和文字将采用包围格式环绕图片，使页面布局更加美观。</p>
@@ -27,33 +28,36 @@
     </section>
 
     <section id="portfolio">
-      <h2>作品集</h2>
+      <h2>———— Portfolio Catalog ————</h2>
       <ul>
-        <li>
-          <a href="works/work1.html">
-            <div class="work-item">
+        <li class="work-item" onclick="goToWorkPage('works/work1.html')">
+            <div class="work-thumbnail">
               <img src="images/work1_image.png" alt="作品1图片">
-              <div class="work-description">
-                <p class="work-title">作品1</p>
-                <p class="work-text">在这里添加作品1的简要介绍。</p>
-              </div>
             </div>
-          </a>
+            <div class="work-description">
+              <p class="work-title">作品1</p>
+              <p class="work-text">在这里添加作品1的简要介绍。</p>
+            </div>
         </li>
-        <li>
-          <a href="works/work2.html">
-            <div class="work-item">
+        <li class="work-item" onclick="goToWorkPage('works/work2.html')">
+            <div class="work-thumbnail">
               <img src="images/work2_image.png" alt="作品2图片">
-              <div class="work-description">
-                <p class="work-title">作品2</p>
-                <p class="work-text">在这里添加作品2的简要介绍。</p>
-              </div>
+            </div>
+            <div class="work-description">
+              <p class="work-title">作品2</p>
+              <p class="work-text">在这里添加作品2的简要介绍。</p>
             </div>
           </a>
         </li>
         <!-- 添加更多作品链接 -->
       </ul>
     </section>
+    <script>
+      function goToWorkPage(url) {
+        // 使用 window.location.href 实现页面跳转
+        window.location.href = url;
+      }
+    </script>
   </main>
 
   <footer>

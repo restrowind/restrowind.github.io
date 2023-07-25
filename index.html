@@ -7,62 +7,36 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header>
-    <!-- 在这里放置你的导航栏或Logo等 -->
-   <!-- 在主页index.html的头部添加以下脚本 -->
-    <script>
-    // 监听作品集目录链接的点击事件
-    document.addEventListener("DOMContentLoaded", function () {
-        const portfolioLinks = document.querySelectorAll("ul li a");
-
-        portfolioLinks.forEach(link => {
-        link.addEventListener("click", function (event) {
-            event.preventDefault();
-            const targetId = this.getAttribute("href");
-            const targetElement = document.querySelector(targetId);
-            targetElement.scrollIntoView({ behavior: "smooth" });
-        });
-        });
-    });
-    </script>
-
-    <p>Hello everyone! </p>
-    <p>I'm Leon Wang, this is my personal website. </p>
-    <p>Glad you are here, you can contact me via the email below: </p>
-    <p>light_of_violin@163.com </p>
-    <p>Besides, you can also find me in Bilibili. The following is the link to my Bilibili personal homepage</p>
-    
-    <ul>
-    <li> <a href="https://space.bilibili.com/66598185">My Bilibili</a> </li>
-    </ul>
-   
+  <header style="background-color: lightblue;">
+    <div class="header-content">
+      <div class="profile">
+        <img src="images/profile_picture.png" alt="Your Name">
+        <p>欢迎来到我的个人网站！</p>
+      </div>
+    </div>
   </header>
 
   <main>
-    <h1>作品集目录</h1>
-    <ul>
-      <li><a href="#work1">作品1</a></li>
-      <li><a href="#work2">作品2</a></li>
-      <!-- 添加更多作品链接 -->
-    </ul>
-
-    <!-- 作品1 -->
-    <section id="work1">
-      <!-- 在这里放置作品1的内容 -->
-      <p>此为作品1 </p>
+    <section id="about">
+      <h2>关于我</h2>
+      <div class="about-content">
+        <img src="images/about_picture.png" alt="关于我图片" class="about-image">
+        <p>在这里添加你的自我介绍，你可以描述自己的背景、技能和兴趣爱好等。图片和文字将采用包围格式环绕图片，使页面布局更加美观。</p>
+      </div>
     </section>
 
-    <!-- 作品2 -->
-    <section id="work2">
-      <!-- 在这里放置作品2的内容 -->
-      <p>此为作品2 </p>
+    <section id="portfolio">
+      <h2>作品集</h2>
+      <ul>
+        <li><a href="works/work1.html">作品1</a></li>
+        <li><a href="works/work2.html">作品2</a></li>
+        <!-- 添加更多作品链接 -->
+      </ul>
     </section>
-    <!-- 添加更多作品的单独网页内容 -->
   </main>
 
   <footer>
-    <!-- 在这里放置页脚信息 -->
+    <p>联系方式：your.email@example.com | 手机：(123) 456-7890</p>
   </footer>
 </body>
 </html>
-

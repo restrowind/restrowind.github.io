@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <header style="background-color: lightblue;">
+  <header style="background-color: var(--main-color);">
     <div class="header-content">
       <div class="profile">
         <img src="images/profile_picture.png" alt="Leon Wang">
@@ -20,7 +20,9 @@
   <main>
 
     <section id="about">
-      <h2>———— About Me ————</h2>
+      <div class="vertical-space"></div>
+      <h1>———— About Me ————</h1>
+      <div class="vertical-space"></div>
       <div class="about-content">
         <img src="images/about_picture.png" alt="关于我图片" class="about-image">
         <p>在这里添加你的自我介绍，你可以描述自己的背景、技能和兴趣爱好等。图片和文字将采用包围格式环绕图片，使页面布局更加美观。</p>
@@ -28,7 +30,11 @@
     </section>
 
     <section id="portfolio">
-      <h2>———— Portfolio Catalog ————</h2>
+      <div class="vertical-space"></div>
+      <div class="vertical-space"></div>
+      <div class="vertical-space"></div>
+      <h1>———— Portfolio Catalog ————</h1>
+      <div class="vertical-space"></div>
       <ul>
         <li class="work-item" onclick="goToWorkPage('works/work1.html')">
             <div class="work-thumbnail">
@@ -53,11 +59,20 @@
       </ul>
     </section>
     <script>
-      function goToWorkPage(url) {
-        // 使用 window.location.href 实现页面跳转
+       function goToWorkPage(url) {
+      // 添加页面渐变效果
+      document.body.style.transition = 'opacity 0.5s ease';
+      document.body.style.opacity = '0';
+      
+      // 等待一小段时间，再进行页面跳转
+      setTimeout(function() {
         window.location.href = url;
-      }
+      }, 500); // 0.5秒后跳转页面
+    }
     </script>
+      <div class="vertical-space"></div>
+      <div class="vertical-space"></div>
+      <div class="vertical-space"></div>
   </main>
 
   <footer>

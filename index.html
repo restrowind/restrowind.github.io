@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script src="js/script.js"></script> <!-- 将 script.js 文件链接到页面 -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Your Name - Portfolio</title>
@@ -28,15 +29,35 @@
     <section id="portfolio">
       <h2>作品集</h2>
       <ul>
-        <li><a href="works/work1.html">作品1</a></li>
-        <li><a href="works/work2.html">作品2</a></li>
+        <li>
+          <a href="works/work1.html">
+            <div class="work-item">
+              <img src="images/work1_image.png" alt="作品1图片">
+              <div class="work-description">
+                <p class="work-title">作品1</p>
+                <p class="work-text">在这里添加作品1的简要介绍。</p>
+              </div>
+            </div>
+          </a>
+        </li>
+        <li>
+          <a href="works/work2.html">
+            <div class="work-item">
+              <img src="images/work2_image.png" alt="作品2图片">
+              <div class="work-description">
+                <p class="work-title">作品2</p>
+                <p class="work-text">在这里添加作品2的简要介绍。</p>
+              </div>
+            </div>
+          </a>
+        </li>
         <!-- 添加更多作品链接 -->
       </ul>
     </section>
   </main>
 
   <footer>
-    <p>联系方式：your.email@example.com | 手机：(123) 456-7890</p>
+    <p>E-mail：light_of_violin@163.com | Phone Number：(+86) 13021329116</p>
   </footer>
 </body>
 </html>

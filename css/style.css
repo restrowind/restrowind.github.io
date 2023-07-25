@@ -47,43 +47,51 @@ body {
   
   li {
     margin-bottom: 20px;
-    padding: 60px;
+    padding: 0px;
     border: 1px solid lightblue;
     border-radius: 20px;
     background-color: #fff;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
     transition: background-color 0.3s ease, transform 0.3s ease;
     cursor: pointer; /* 添加鼠标指针样式，表示可点击 */
-    text-decoration: none;
   }
   
   li:hover {
     background-color: #3399FF; /* 鼠标悬停时的深色背景 */
     color: #fff; /* 鼠标悬停时的文字颜色 */
-    transform: translateY(-8px); /* 鼠标悬停时向上移动5px，形成浮动效果 */
+    transform: translateY(-8px); /* 鼠标悬停时向上移动8px并缩放，形成浮动和缩放效果 */
   }
   
   .work-item {
     display: flex;
     align-items: center;
   }
+
+  h2 {
+    text-align: center;
+  }
   
-  .work-item img {
-    width: 120px;
-    height: 120px;
-    border-radius: 10%;
-    margin-right: 80px;
+  .work-thumbnail img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
   .work-description {
     flex: 1;
-    text-decoration: none;
+    margin-left: 20px;
+    text-decoration: none !important;
   }
   
   .work-title {
     font-weight: bold;
-    font-size: 1.8rem;
-    text-decoration: none;
+    font-size: 1.2rem;
+    margin-left: 20px;
+    text-decoration: none !important;
   }
   
   

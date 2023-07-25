@@ -1,9 +1,68 @@
-<p>Hello everyone! </p>
-<p>I'm Leon Wang, this is my personal website. </p>
-<p>Glad you are here, you can contact me via the email below: </p>
-<p>light_of_violin@163.com </p>
-<p>Besides, you can also find me in Bilibili. The following is the link to my Bilibili personal homepage</p>
- 
-<ul>
-  <li> <a href="https://space.bilibili.com/66598185">My Bilibili</a> </li>
-</ul>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Name - Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <!-- 在这里放置你的导航栏或Logo等 -->
+   <!-- 在主页index.html的头部添加以下脚本 -->
+    <script>
+    // 监听作品集目录链接的点击事件
+    document.addEventListener("DOMContentLoaded", function () {
+        const portfolioLinks = document.querySelectorAll("ul li a");
+
+        portfolioLinks.forEach(link => {
+        link.addEventListener("click", function (event) {
+            event.preventDefault();
+            const targetId = this.getAttribute("href");
+            const targetElement = document.querySelector(targetId);
+            targetElement.scrollIntoView({ behavior: "smooth" });
+        });
+        });
+    });
+    </script>
+
+    <p>Hello everyone! </p>
+    <p>I'm Leon Wang, this is my personal website. </p>
+    <p>Glad you are here, you can contact me via the email below: </p>
+    <p>light_of_violin@163.com </p>
+    <p>Besides, you can also find me in Bilibili. The following is the link to my Bilibili personal homepage</p>
+    
+    <ul>
+    <li> <a href="https://space.bilibili.com/66598185">My Bilibili</a> </li>
+    </ul>
+   
+  </header>
+
+  <main>
+    <h1>作品集目录</h1>
+    <ul>
+      <li><a href="#work1">作品1</a></li>
+      <li><a href="#work2">作品2</a></li>
+      <!-- 添加更多作品链接 -->
+    </ul>
+
+    <!-- 作品1 -->
+    <section id="work1">
+      <!-- 在这里放置作品1的内容 -->
+      <p>此为作品1 </p>
+    </section>
+
+    <!-- 作品2 -->
+    <section id="work2">
+      <!-- 在这里放置作品2的内容 -->
+      <p>此为作品2 </p>
+    </section>
+    <!-- 添加更多作品的单独网页内容 -->
+  </main>
+
+  <footer>
+    <!-- 在这里放置页脚信息 -->
+  </footer>
+</body>
+</html>
+

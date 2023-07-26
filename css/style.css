@@ -86,7 +86,7 @@ body {
     margin-left: 50px;
     margin-top: 30px;
     margin-bottom: 30px;
-    transition: border-radius 0.3s ease,width 0.9s ease,height 0.9s ease,margin-left 0.9s ease;
+    transition: border-radius 0.3s ease,width 0.45s ease,height 0.45s ease,margin-left 0.45s ease;
   }
 
   .work-item:hover img {
@@ -122,3 +122,121 @@ body {
   :root {
     --main-color: #207f4c; /* 这里的值可以是任意有效的颜色值，例如 #FF0000 表示红色，#00FF00 表示绿色等 */
   }
+
+  /* 定义头像的样式 */
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin-right: 80px;
+  margin-left: 20px;
+  
+  /* 定义旋转动画 */
+  animation-name: rotateAnimation;
+  animation-duration: 8s; /* 动画持续时间为4秒 */
+  animation-iteration-count: infinite; /* 无限循环动画 */
+  transition: width 0.3s ease,height 0.3s ease;
+}
+.profile:hover image{
+  width: 180px;
+  height: 180px;
+  
+}
+
+/* 定义旋转动画关键帧 */
+@keyframes rotateAnimation {
+  0% {
+    transform: rotate(0deg); /* 初始角度为0度 */
+  }
+  25% {
+    transform: rotate(90deg); 
+  }
+  50% {
+    transform: rotate(180deg); 
+  }
+  75% {
+    transform: rotate(270deg);
+  }
+  100% {
+    transform: rotate(360deg); /* 最终角度为90度 */
+  }
+}
+
+.profile {
+  display: flex; /* 使用 flexbox 布局 */
+  align-items: center; /* 垂直居中头像和欢迎词 */
+}
+
+.profile p {
+  font-style: italic;
+  font-size: 1.4rem;
+}
+
+/* 游戏机样式 */
+.game-machine {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: rgb(152, 34, 34);
+  padding: 5px;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+  margin-left: auto; /* 将游戏机推至header最右端 */
+  margin-right: 30px;
+  position: relative; /* 设置相对定位，使得重新开始按钮的绝对定位生效 */
+
+}
+
+.snake-game-container {
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+/* 按钮样式 */
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.controls div {
+  display: flex;
+  justify-content: center;
+}
+
+.controls button {
+  width: 18px;
+  height: 18px;
+  font-size: 1px;
+  margin-left: 15px;
+}
+
+.left-right-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.up-down-buttons {
+  display: flex;
+  justify-content: center;
+}
+
+/* 重新开始按钮样式 */
+.restart-button {
+  position: absolute; /* 设置绝对定位 */
+  bottom: 20px; /* 调整按钮距离游戏区域顶部的距离 */
+  right: 10px; /* 调整按钮距离游戏区域右侧的距离 */
+}
+
+.restart-button button {
+  width: 54px;
+  height: 20px;
+  text-align:left;
+  font-size: 5px;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* 添加底板颜色 */
+#gameCanvas {
+  background-color: black;
+}

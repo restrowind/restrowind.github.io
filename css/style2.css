@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center; /* 居中整个内容 */
+}
+
+.tabs {
+  display: flex; /* 使用 flex 布局以确保等宽 */
+  justify-content: center;
+  margin-top: 50px;
+}
+
+.tab-button {
+  background-color: #207f4c; /* 主题色 */
+  border: none;
+  outline: none;
+  cursor: pointer;
+  flex: 0 0 160px; /* 不允许按钮增长或缩小，宽度设置为80px */
+  padding: 10px;
+  transition: background-color 0.3s, color 0.3s;
+  font-size: 18px; 
+  font-weight: bold; 
+  border-radius: 0; /* 默认无圆角 */
+}
+
+.tab-button:first-child {
+  border-radius: 10px 0 0 10px; /* 左侧第一个按钮左侧圆角 */
+}
+
+.tab-button:last-child {
+  border-radius: 0 10px 10px 0; /* 右侧最后一个按钮右侧圆角 */
+}
+
+.tab-button:hover, .tab-button.active {
+  background-color: #ddd; /* 激活或悬停状态的颜色 */
+  color: black;
+}
+
+.tab-content {
+  margin-top: 60px;
+  display: block;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-top: none;
+  width: 100%;
+  opacity: 0; /* 初始完全透明 */
+  transform: translateX(-100%); /* 初始偏移，向左移出视图 */
+  transition: opacity 0.3s ease, transform 1s ease;
+  position: absolute; /* 初始绝对定位 */
+}
+
+.tab-content.active {
+  opacity: 1; /* 完全不透明 */
+  transform: translateX(0%); /* 无偏移，内容在容器内 */
+  position: relative; /* 激活时相对定位 */
+}
+
+.download-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #207f4c;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.download-button:hover {
+  background-color: #1a5d38;
+}
+
+.return-button {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  width: 40px; /* 设置固定宽度 */
+  height: 40px; /* 设置固定高度，与宽度相同 */
+  line-height: 40px; /* 使文字垂直居中 */
+  text-align: center; /* 水平居中文本 */
+  background-color: #207f4c;
+  color: white;
+  border-radius: 50%; /* 圆形按钮 */
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 1000;
+}

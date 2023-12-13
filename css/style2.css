@@ -412,8 +412,17 @@ body, html {
   background-color: rgba(0, 237, 237, 0); /* Placeholder for game cover */
 }
 
-h2,h3,h4 {
+h1,h2,h3,h4 {
   color: var(--text-color); /* 使用定义的变量 */
+}
+
+h1{
+  font-size:50px;
+  font-style: italic;
+  margin-bottom: -50px;
+  margin-top: 50px; 
+  text-align: center;
+  color:var(--text-color2);
 }
 
 li {

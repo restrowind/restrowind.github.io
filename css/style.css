@@ -1,3 +1,6 @@
+/* 电脑端样式 */
+@media screen and (min-width: 768px) {
+
 :root {
   --main-bg-color: #207f4c;
   --text-color: #fff;
@@ -488,3 +491,254 @@ header.scrolled .game-machine {
   display: flex;
 }
 
+}
+
+@media screen and (max-width: 767px) {
+
+  :root {
+    --main-bg-color: #207f4c;
+    --text-color: #fff;
+    --font-family: Arial, sans-serif;
+  }
+  
+  /* 适用于手机屏幕的样式 */
+  @media screen and (max-width: 767px) {
+    body {
+      background-color: #a8d8a8; /* 简化背景，适应小屏幕 */
+      font-family: var(--font-family);
+      margin: 0;
+      padding: 0;
+      text-align: left; /* 在手机屏幕上左对齐文本 */
+    }
+  
+    /* 在手机屏幕上隐藏复杂的背景样式 */
+    body::before, body::after {
+      display: none;
+    }
+  
+    .tabs {
+      display: block; /* 在手机屏幕上使标签按钮堆叠 */
+    }
+  
+    .tab-button {
+      width: 100%; /* 按钮宽度调整为100% */
+      padding: 10px; /* 调整按钮内边距 */
+      font-size: 16px; /* 调整字体大小 */
+    }
+  
+    .tab-content {
+      margin-top: 20px; /* 调整上边距 */
+    }
+  
+    .download-button, .platform-button {
+      width: 100%; /* 按钮宽度调整为100% */
+      margin-bottom: 10px; /* 调整按钮间距 */
+    }
+  
+    .home-button {
+      top: 20px;
+      left: 20px;
+      width: 60px; /* 调整按钮大小 */
+      height: 60px; /* 调整按钮大小 */
+      line-height: 60px; /* 调整行高以居中文本 */
+      font-size: 14px; /* 调整字体大小 */
+    }
+  
+    .gallery-container {
+      flex-direction: column; /* 在手机屏幕上垂直堆叠元素 */
+      width: 100%; /* 容器宽度调整为100% */
+      height: auto; /* 高度自适应 */
+    }
+  
+    .left-panel, .right-panel {
+      width: 100%; /* 调整面板宽度为100% */
+    }
+  
+    .main-image-display, .image-preview-container {
+      height: auto; /* 高度自适应 */
+    }
+  
+    .game-cover, .game-description {
+      height: auto; /* 高度自适应 */
+    }
+  
+    .content-page {
+      padding: 10px; /* 调整内边距 */
+    }
+  
+    h1 {
+      font-size: 24px; /* 调整标题字体大小 */
+      margin-top: 20px; /* 调整标题上边距 */
+      text-align: center; /* 标题居中 */
+    }
+  
+    footer {
+      padding: 10px 0; /* 调整页脚内边距 */
+    }
+  }
+  
+  header {
+    height: 150px; /* 在手机上减少header高度 */
+  }
+
+  header.scrolled {
+    height: 40px; /* 在手机上缩小滚动后的header高度 */
+  }
+
+  .portfolio-portal {
+    top: 150px; /* 调整为新的header高度 */
+    left: 1%;
+    transform: translateY(-80%); /* 初始隐藏 */
+  }
+
+  .portal-image {
+    width: 40px; /* 在手机上调整图片框尺寸 */
+  }
+
+  .portal-buttons {
+    margin-top: 100px; /* 在手机上调整按钮上边距 */
+    margin-left: -15px; /* 在手机上调整按钮左边距 */
+    flex-direction: column;
+  }
+
+  .portal-buttons a {
+    padding: 8px 15px; /* 在手机上调整按钮内边距 */
+    font-size: 16px; /* 在手机上调整字体大小 */
+  }
+
+  .header-content {
+    flex-direction: column; /* 在手机上将内容垂直堆叠 */
+  }
+
+  .header-content > *:not(.profile) {
+    display: none; /* 在手机上隐藏其他内容 */
+  }
+
+  main {
+    padding-top: 180px; /* 在手机上调整主内容的上边距 */
+  }
+
+  .about-content, .work-description, .update-log {
+    flex-direction: column; /* 在手机上将内容垂直堆叠 */
+    align-items: center; /* 在手机上居中对齐 */
+    padding: 10px; /* 在手机上增加内边距 */
+  }
+
+  .faceup-image, .about-image {
+    width: 100%; /* 在手机上全宽显示图片 */
+    height: auto; /* 在手机上高度自适应 */
+    margin-bottom: 20px; /* 在手机上调整图片下边距 */
+    float: none; /* 在手机上取消浮动 */
+  }
+
+  ul.work-list li {
+    width: auto; /* 在手机上调整列表项宽度 */
+  }
+  li {
+    border: 4px solid var(--main-color); /* 手机端边框更细 */
+    border-radius: 15px; /* 手机端圆角更小 */
+    margin-bottom: 15px; /* 手机端间距更小 */
+  }
+
+  .work-item {
+    width: 100%; /* 手机端充满整个屏幕宽度 */
+    flex-direction: column; /* 手机端垂直排列 */
+    align-items: center;
+    margin: 0 10px; /* 手机端两侧留出一点空间 */
+    margin-bottom: 15px; /* 手机端间距更小 */
+  }
+
+  .work-item:hover {
+    width: 100%; /* 手机端悬停不变宽 */
+  }
+
+  h1 {
+    font-size: 1.8rem; /* 手机端标题字体更小 */
+  }
+
+  .work-thumbnail img {
+    width: 80px; /* 手机端图片更小 */
+    height: 80px;
+    margin: 15px; /* 手机端边距更小 */
+  }
+
+  .work-item:hover img {
+    width: 100px; /* 手机端悬停图片稍微变大 */
+    height: 100px;
+    margin-left: 10px; /* 手机端边距更小 */
+  }
+
+  .work-description {
+    text-align: left; /* 手机端文字左对齐 */
+    padding: 0 10px; /* 手机端增加内边距 */
+  }
+
+  footer {
+    padding: 15px; /* 手机端页脚内边距更大 */
+  }
+
+  .profile img {
+    width: 120px; /* 手机端头像更小 */
+    height: 120px;
+    margin: 0 auto; /* 手机端头像居中 */
+    position: relative; /* 手机端取消绝对定位 */
+    top: unset; /* 手机端取消顶部定位 */
+  }
+
+  .profile:hover img {
+    width: 120px; /* 手机端悬停不变大 */
+    height: 120px;
+  }
+  .controls {
+    flex-direction: row; /* 手机端将按钮水平排列 */
+    justify-content: space-around;
+  }
+
+  .controls button {
+    width: 24px; /* 手机端增加按钮尺寸 */
+    height: 24px;
+    font-size: 12px; /* 手机端增加字体大小 */
+  }
+
+  .left-right-buttons, .up-down-buttons {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .restart-button button {
+    width: 100px; /* 手机端按钮更宽 */
+    height: 30px; /* 手机端按钮更高 */
+    font-size: 14px; /* 手机端字体更大 */
+  }
+
+  .restart-button {
+    bottom: 10px; /* 手机端重新开始按钮位置调整 */
+    right: 10px;
+  }
+
+  .tabs {
+    flex-direction: column; /* 手机端标签页垂直排列 */
+  }
+
+  .tab-button {
+    flex: 0 1 auto; /* 手机端按钮自适应宽度 */
+    font-size: 16px; /* 手机端字体更小 */
+  }
+
+  .tab-content {
+    padding: 20px; /* 手机端增加内边距 */
+    margin-top: 10px; /* 手机端顶部间距更小 */
+  }
+
+  /* 调整游戏控制按钮区域的样式 */
+  .game-machine {
+    margin: 0 auto; /* 手机端游戏机居中 */
+    width: 95%; /* 手机端游戏机宽度调整 */
+  }
+
+  .snake-game-container {
+    width: 100%; /* 手机端游戏区域充满容器 */
+    margin-bottom: 10px; /* 手机端底部间距增加 */
+  }
+
+}

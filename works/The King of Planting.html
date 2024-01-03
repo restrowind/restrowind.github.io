@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The King of Planting - Leyan</title>
+    <link rel="stylesheet" href="../css/style2.css">
+    <style>
+      :root {
+        --primary-color: rgb(174, 159, 119);/* 作品的主要主题色 */
+        --secondary-color: rgb(206, 189, 147);  /* 次要颜色 */
+        --accent-color: rgb(50, 144, 31);  /* 强调颜色 */
+        --margin-background-color:rgb(194, 187, 130);
+        --text-color: rgb(0, 0, 0);
+        --text-color2: rgb(255, 247, 228);
+        --tag-text-color:rgb(255, 247, 228);
+      }
+      
+
+    </style>
+  </head>
+  <body>
+      
+    <a href="javascript:history.back()" id="home-button" class="home-button">&#8592;Home</a>
+
+    <div class="tabs">
+        <button class="tab-button" onclick="openTab('info')">Basic Information</button>
+        <button class="tab-button" onclick="openTab('pdf')">Game Introduction</button>
+        <button class="tab-button" onclick="openTab('download')">Download</button>
+    </div>
+
+    <div id="info" class="tab-content" data-index="0">
+      <h2>————Game Information————</h2>
+      <h1>~The King of Planting~</h1>
+
+
+        <div class="gallery-container">
+          <div class="left-panel">
+              <div class="main-image-display">
+                <div class="left-arrow" onclick="previousImage()">&#8592;</div> <!-- 左箭头 -->
+                <div class="right-arrow" onclick="nextImage()">&#8594;</div>  <!-- 右箭头 -->
+              </div>
+              <div class="image-preview-container"></div>
+              <script>
+                const lowResImages = ['../images/KOP/KOP4_lowres.png','../images/KOP/KOP1_lowres.png', '../images/KOP/KOP2_lowres.png','../images/KOP/KOP5_lowres.png','../images/KOP/KOP6_lowres.png','../images/KOP/KOP7_lowres.png','../images/KOP/KOP3_lowres.png','../images/KOP/KOP8_lowres.png'];
+                const highResImages = ['../images/KOP/KOP4.png','../images/KOP/KOP1.png', '../images/KOP/KOP2.png','../images/KOP/KOP5.png','../images/KOP/KOP6.png','../images/KOP/KOP7.png','../images/KOP/KOP3.png','../images/KOP/KOP8.png'];
+                // 在页面加载时执行的代码
+                window.onload = function() {                 
+
+                // 初始显示第一张高分辨率图片
+                changeMainImage(highResImages[0]);
+
+                // 启动轮播
+                startImageSlideShow();
+              };
+              </script>
+          </div>
+          <div class="right-panel">
+            <div class="game-cover">
+              <img src="../images/KOP/Cover.png" alt="Game Cover"> <!-- 游戏封面图 -->
+            </div>
+
+            <div class="game-description">
+              <h4 style="color:black">Release Platforms：</h4>
+              <span class="tag">Windows</span>
+              <!-- 其他平台标签 -->
+            
+              <h4 style="color:black">Game Genre：</h4>
+              <span class="tag">Public Space</span>
+              <span class="tag">Environmental Protection</span>
+              <!-- 其他类型标签 -->
+            
+              <h4 style="color:black">Development Engine：</h4>
+              <span class="tag">Unity3D</span>
+              <!-- 其他引擎标签 -->
+            </div>
+          </div>
+        </div>
+          
+
+
+
+        <div class="content-page"> 
+          <h3>Production Team:</h3>
+            <p style="color:var(--text-color2);">
+              It Takes Six
+            </p>
+            <h3>May Role:</h3>
+            <p style="color:var(--text-color2);">
+              Designer, Lead programmer
+            </p>
+            <h3>Major Achievements:</h3>
+            <p style="color:var(--text-color2);">
+              Excellent Coursework for the Public Lecture on the Social Value of Games in China
+            </p>
+        </div>
+    </div>
+    
+
+    <div id="pdf" class="tab-content" data-index="1">
+      <h2 style="margin-bottom: 30px;">————⭐Game Portfolio Showcase⭐————</h2>
+      <iframe src="../PDF/KingOfPlanting.pdf" width="1350" height="1000" style="margin-bottom: 20px;"></iframe>
+      <p style="font-weight: bold; text-align: center; font-size: 15px; width: 1200px; margin: 20px auto 0;color:var(--text-color);">
+        This presentation of the project primarily focuses on the team's division of labor and certain aspects of the design approach. 
+        It doesn't fully reveal the entire design process and all the underlying concepts. 
+        The content is mainly centered around the elucidation of design ideas from the perspective of individual work contributions.</p>
+    </div>
+
+    <div id="download" class="tab-content" data-index="2">
+      <h2>————Download————</h2>
+      <a href="../PDF/KingOfPlanting.pdf" class="download-button" download>Download Portfolio PDF</a>
+      <div id="game-download-container">
+        <a href="#" class="download-button" id="game-download-button">⭐Download Game</a>
+          <div id="platform-buttons" class="hidden">
+              <a href="https://github.com/restrowind/restrowind.github.io/releases/download/TheKingOfPlanting/KingOfPlanting.zip" class="platform-button" download>The King of Planting (v1.1 For Android)</a>
+          </div>
+        </div>
+        <div id="update-log">
+          <h2>————Update Log————</h2>
+          <ul>
+              <li><strong>v1.1:</strong> Added a saving system. <br>Each time the game is reopened, trees automatically grow to maturity, simulating the scenario of new players starting the game in a public space.</li>
+              <li><strong>v1.0:</strong> Initial Version</li>
+              <!-- 更多更新日志条目 -->
+          </ul>
+        </div>
+     </div>
+     
+
+    </div>
+
+    <script src="../js/script2.js"></script>
+  </body>
+
+  <div class="tab-content-placeholder" style="height: 1300px;"></div>
+
+  <footer>
+    <div class="vertical-space"></div>
+    <p>E-mail：light_of_violin@163.com | Phone Number：(+86) 13021329116</p>
+    <div class="vertical-space"></div>
+    <div class="vertical-space"></div>
+  </footer>
+  
+  
+
+</html>

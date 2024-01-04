@@ -47,7 +47,7 @@ document.getElementById('home-button').addEventListener('click', function(e) {
 
   setTimeout(function() {
       // 在渐隐完成后跳转到主页
-      window.location.href = '../Home Page.html';
+      window.location.href = '../index.html';
   }, 500);
 });
 

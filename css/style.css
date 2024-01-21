@@ -15,6 +15,11 @@
   padding: 0; 
 }*/
 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('../fonts/Cute-Aurora-2.ttf') format('truetype');
+}
+
 
 
 
@@ -197,6 +202,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: center; 
+  font-family: 'MyCustomFont';
 }
 
 

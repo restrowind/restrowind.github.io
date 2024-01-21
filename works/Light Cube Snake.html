@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Light Cube Snake - Leyan</title>
+    <link rel="stylesheet" href="../css/style2.css">
+    <style>
+      :root {
+        --primary-color: rgb(25, 25, 25); /* 作品的主要主题色 */
+        --secondary-color: rgb(23, 53, 75);  /* 次要颜色 */
+        --accent-color: rgb(44, 106, 153);  /* 强调颜色 */
+        --margin-background-color:rgb(50, 50, 50);
+        --text-color: rgb(235, 235, 235);
+        --text-color2: rgb(221, 221, 221);
+        --tag-text-color:rgb(221, 221, 221);
+      }
+      
+
+    </style>
+  </head>
+  <body>
+      
+    <a href="javascript:history.back()" id="home-button" class="home-button">&#8592;Home</a>
+
+    <div class="tabs">
+        <button class="tab-button" onclick="openTab('info')">Basic Information</button>
+        <button class="tab-button" onclick="openTab('pdf')">Introduction</button>
+        <button class="tab-button" onclick="openTab('download')">Download</button>
+    </div>
+
+    <div id="info" class="tab-content" data-index="0">
+
+      <h2>————Basic Information————</h2>
+
+      <h1>~Light Cube Snake~</h1>
+
+        <div class="gallery-container">
+          <div class="left-panel">
+              <div class="main-image-display">
+                <div class="left-arrow" onclick="previousImage()">&#8592;</div> <!-- 左箭头 -->
+                <div class="right-arrow" onclick="nextImage()">&#8594;</div>  <!-- 右箭头 -->
+              </div>
+              <div class="image-preview-container"></div>
+              <script>
+                const lowResImages = ['../images/LCS/LCS2.png','../images/LCS/LCS5.png','../images/LCS/LCS1.png'];
+                const highResImages = ['../images/LCS/LCS2.png','../images/LCS/LCS5.png','../images/LCS/LCS1.png'];
+                // 在页面加载时执行的代码
+                window.onload = function() {
+
+                  // 初始显示第一张高分辨率图片
+                  changeMainImage(highResImages[0]);
+
+                  // 启动轮播
+                  startImageSlideShow();
+                };
+              </script>
+          </div>
+          <div class="right-panel">
+            <div class="game-cover">
+              <img src="../images/LCS/LCS_CoverWide.png" alt="Game Cover"> <!-- 游戏封面图 -->
+            </div>
+
+            <div class="game-description">
+              
+              <h4 style="color:black">Genre：</h4>
+              <span class="tag">Human-Computer Interaction Work</span>
+
+              <h4 style="color:black">Development Tools：</h4>
+              <span class="tag">Arduino</span>
+              <!-- 其他平台标签 -->
+            
+              <h4 style="color:black">Simulation Website：</h4>
+              <span class="tag">Wokwi</span>
+              <!-- 其他类型标签 -->
+
+            </div>
+          </div>
+        </div>
+          
+
+
+
+      <div class="content-page"> 
+        <h3>Production Team:</h3>
+          <p style="color:var(--text-color2);">
+            Gemen Wangchuang
+          </p>
+          <h3>May Role:</h3>
+          <p style="color:var(--text-color2);">
+            Planner, Programmer
+          </p>
+          <h3>Summary: </h3>
+          <p style="color:var(--text-color2);">
+          This project was a final assignment for the human-computer interaction course at CUC, 
+          <br><br>co-completed by myself and Hongjie Ge. 
+          <br><br>The project was developed using Arduino and simulated using Wokwi.
+          <br><br>(
+          Due to the pandemic, this course was completed online from home, 
+          so a physical device was not created. Instead, Wokwi simulation was used.)
+        </p>
+      </div>
+    </div>
+    
+
+    <div id="pdf" class="tab-content" data-index="1">
+      <h2 style="margin-bottom: 30px;">————⭐Portfolio Showcase⭐————</h2>
+      <iframe src="../PDF/LightSnake.pdf" width="1350" height="1000" style="margin-bottom: 20px;"></iframe>
+      <p style="font-weight: bold; text-align: center; font-size: 15px; width: 1200px; margin: 20px auto 0;color:var(--text-color);">
+        There is no English version of this project introduction at the moment. 
+        The above is only a presentation PowerPoint for the end-of-course report.</p>
+    </div>
+
+    <div id="download" class="tab-content" data-index="2">
+      <h2>————Download————</h2>
+      <a href="../PDF/LightSnake.pdf" class="download-button" download>Download Portfolio PDF</a>
+      <div id="game-download-container">
+        <a href="#" class="download-button" id="game-download-button">⭐Related Links</a>
+          <div id="platform-buttons" class="hidden">
+              <a href="https://wokwi.com/projects/332916325310530132" class="platform-button" download>Browse the Wokwi simulation website</a>
+              <a href="https://youtu.be/8Oy6kLu2Zyk" class="platform-button" download>Demonstration Video</a>
+            </div>
+
+        <div id="update-log">
+          <h2>————Update Log————</h2>
+          <ul>
+              <li><strong>No Update Information Available</strong></li>
+              
+              <!-- 更多更新日志条目 -->
+          </ul>
+        </div>
+     </div>
+    </div>
+
+
+    <script src="../js/script2.js"></script>
+  </body>
+
+  <div class="tab-content-placeholder" style="height: 1300px;"></div>
+
+  <footer>
+    <div class="vertical-space"></div>
+    <p>E-mail：light_of_violin@163.com | Phone Number：(+86) 13021329116</p>
+    <div class="vertical-space"></div>
+    <div class="vertical-space"></div>
+  </footer>
+  
+  
+
+</html>

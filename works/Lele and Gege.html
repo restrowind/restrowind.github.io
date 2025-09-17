@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lele and Gege - Leyan</title>
+    <link rel="stylesheet" href="../css/style2.css">
+    <style>
+      :root {
+        --primary-color: rgb(117, 178, 61); /* 作品的主要主题色 */
+        --secondary-color: rgb(255, 249, 226);  /* 次要颜色 */
+        --accent-color: rgb(210, 160, 80);  /* 强调颜色 */
+        --margin-background-color:rgb(172, 79, 58);
+        --text-color: rgb(182, 132, 53);
+        --text-color2: rgb(133, 87, 24);
+        --tag-text-color:rgb(148, 102, 29);
+      }
+      
+
+    </style>
+  </head>
+  <body>
+      
+    <a href="javascript:history.back()" id="home-button" class="home-button">&#8592;Home</a>
+
+    <div class="tabs">
+        <button class="tab-button" onclick="openTab('info')">Basic Information</button>
+        <button class="tab-button" onclick="openTab('download')">Video Links</button>
+    </div>
+
+    <div id="info" class="tab-content" data-index="0">
+
+      <h2>————Basic Information————</h2>
+
+      <h1>~Lele & Gege~</h1>
+
+        <div class="gallery-container">
+          <div class="left-panel">
+              <div class="main-image-display">
+                <div class="left-arrow" onclick="previousImage()">&#8592;</div> <!-- 左箭头 -->
+                <div class="right-arrow" onclick="nextImage()">&#8594;</div>  <!-- 右箭头 -->
+              </div>
+              <div class="image-preview-container"></div>
+              <script>
+                const lowResImages = ['../images/Le&Ge/Zipped/Le&Ge1.png','../images/Le&Ge/Zipped/Le&Ge2.png','../images/Le&Ge/Zipped/Le&Ge3.png','../images/Le&Ge/Zipped/Le&Ge4.png','../images/Le&Ge/Zipped/Le&Ge5.png','../images/Le&Ge/Zipped/Le&Ge6.png','../images/Le&Ge/Zipped/Le&Ge7.png','../images/Le&Ge/Zipped/Le&Ge8.png','../images/Le&Ge/Zipped/Le&Ge9.png'];
+                const highResImages = ['../images/Le&Ge/Le&Ge1.png','../images/Le&Ge/Le&Ge2.png','../images/Le&Ge/Le&Ge3.png','../images/Le&Ge/Le&Ge4.png','../images/Le&Ge/Le&Ge5.png','../images/Le&Ge/Le&Ge6.png','../images/Le&Ge/Le&Ge7.png','../images/Le&Ge/Le&Ge8.png','../images/Le&Ge/Le&Ge9.png'];
+                // 在页面加载时执行的代码
+                window.onload = function() {
+
+                  // 初始显示第一张高分辨率图片
+                  changeMainImage(highResImages[0]);
+
+                  // 启动轮播
+                  startImageSlideShow();
+                };
+              </script>
+          </div>
+          <div class="right-panel">
+            <div class="game-cover">
+              <img src="../images/Le&Ge/Zipped/Le&Ge9.png" alt="Game Cover"> <!-- 游戏封面图 -->
+            </div>
+
+            
+
+            <div class="game-description">
+              <h4 style="color:black">Genre：</h4>
+              <span class="tag">3D Animation</span>
+
+              <h4 style="color:black">Development Tools：</h4>
+              <span class="tag">Maya</span>
+
+              <!-- 其他类型标签 -->
+
+            </div>
+          </div>
+        </div>
+          
+
+
+
+      <div class="content-page"> 
+        <h3>Producer:</h3>
+          <p style="color:var(--text-color2);">
+            Leyan Wang
+          </p>
+          <h3>Main Role:</h3>
+          <p style="color:var(--text-color2);">
+            Modeler, Rigger, Animator, Story Script Designer
+          </p>
+          
+        </p>
+      </div>
+    </div>
+    
+
+
+    <div id="download" class="tab-content" data-index="2">
+      <h2>————Links————</h2>
+      <div id="game-download-container">
+        <a href="#" class="download-button" id="game-download-button">⭐Video Links</a>
+          <div id="platform-buttons" class="hidden">
+            <a href="https://youtu.be/4bsbUHoUq1c" class="platform-button" download>Animation</a>
+            </div>
+
+     </div>
+    </div>
+
+
+    <script src="../js/script2.js"></script>
+  </body>
+
+  <div class="tab-content-placeholder" style="height: 1300px;"></div>
+
+  <footer>
+    <div class="vertical-space"></div>
+    <p>E-mail：light_of_violin@163.com | Phone Number：(+86) 13021329116</p>
+    <div class="vertical-space"></div>
+    <div class="vertical-space"></div>
+  </footer>
+  
+  
+
+</html>
